@@ -1,0 +1,54 @@
+$color-primary: rgb(253, 251, 247);
+$bg-color: rgb(27, 82, 110);
+$padding-container: 0 15px;
+$font: 'Square Peg';
+
+%CSSlink {
+  list-style-type: none;
+  color: rgba(49, 144, 42, 0.396);
+}
+
+$margin: 0 auto;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: $margin;
+  padding: $padding-container;
+
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-color;
+    align-items: center;
+
+    .header__logo {
+      .logo {
+        height: 30px;
+        width: 120px;
+      }
+
+    }
+
+    .header__right {
+      &--navbar {
+        display: flex;
+        flex-direction: row;
+
+        .header__right--link {
+          color: $color-primary;
+          @extend %CSSlink;
+          padding: 5px;
+          font-family: $font;
+        }
+      }
+    }
+  }
+}
